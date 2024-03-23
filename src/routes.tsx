@@ -23,9 +23,9 @@ export const AppRoutes = () => {
     }, [])
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
-                <Route path="/" element={<Main />} />
+                <Route  path="/" element={<Main />} />
                 <Route path="/product/:id" element={<Product />} />
             </Routes>
         </BrowserRouter>
